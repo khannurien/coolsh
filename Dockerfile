@@ -39,10 +39,10 @@ RUN locale-gen C.UTF-8 && update-locale LANG=C.UTF-8
 ENV LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
 ENV TERM=xterm-256color
 
-RUN ln -f /usr/bin/zsh /bin/sh
-RUN groupadd -r -g 1337 leet && \
-    useradd -r -m -u 1337 -g 1337 -s /usr/bin/zsh leet
-RUN chown leet:leet /mnt
+RUN ln -f /usr/bin/zsh /bin/sh && \
+    groupadd -r -g 1337 leet && \
+    useradd -r -m -u 1337 -g 1337 -s /usr/bin/zsh leet && \
+    chown leet:leet /mnt
 
 USER leet
 WORKDIR /home/leet
@@ -55,8 +55,7 @@ RUN git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/t
 RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-ADD --chown=leet:leet config/.zshrc /home/leet/
-ADD --chown=leet:leet config/.vimrc /home/leet/
+ADD --chown=leet:leet config/* /home/leet/
 
 RUN git config --global core.pager "diff-so-fancy | less --tabs=2 -RFX"
 
