@@ -19,7 +19,7 @@ You will need Docker and [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts).
   * [vim-signify](https://github.com/mhinz/vim-signify)
   * [palenight](https://github.com/drewtempelmeyer/palenight.vim)
 
-## Tools
+### Tools
 
   * awk
   * [bat](https://github.com/sharkdp/bat)
@@ -33,7 +33,7 @@ You will need Docker and [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts).
   * ssh
   * [tldr](https://tldr.sh)
 
-## Usage
+## Usage
 
 ```
 git clone https://github.com/khannurien/coolsh
