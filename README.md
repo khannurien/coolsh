@@ -32,6 +32,7 @@ You will need Docker and [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts).
   * curl
   * [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
   * [fd](https://github.com/sharkdp/fd/)
+  * git
   * [lsd](https://github.com/Peltoche/lsd)
   * [ncdu](https://dev.yorhel.nl/ncdu)
   * [prettyping](https://github.com/denilsonsa/prettyping)
