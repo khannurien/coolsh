@@ -1,6 +1,9 @@
 # coolsh
 🐚 A Docker container for shell power users
 
+## Requirements
+You will need Docker and [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts).
+
 ## Included
 
 ### Shell
