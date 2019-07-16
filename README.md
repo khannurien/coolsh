@@ -47,3 +47,11 @@ cd coolsh
 docker build -t coolsh .
 docker run -it --hostname coucou coolsh:latest
 ```
+
+You can also mount a directory from your host OS in order to work on it from the container:
+
+```
+docker run -it --hostname coucou -v /path/to/directory:/mnt coolsh:latest
+```
+
+The directory will then be available at `/mnt` in the container.
