@@ -40,8 +40,9 @@ ENV LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
 ENV TERM=xterm-256color
 
 RUN ln -f /usr/bin/zsh /bin/sh
-RUN useradd -r -m -u 1337 -s /usr/bin/zsh leet
-RUN chown leet:leet /mnt 
+RUN groupadd -r -g 1337 leet && \
+    useradd -r -m -u 1337 -g 1337 -s /usr/bin/zsh leet
+RUN chown leet:leet /mnt
 
 USER leet
 WORKDIR /home/leet
