@@ -17,6 +17,12 @@ You will need Docker and [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts).
   * [Plug](https://github.com/junegunn/vim-plug)
   * [vim-airline](https://github.com/vim-airline/vim-airline)
   * [vim-signify](https://github.com/mhinz/vim-signify)
+  * [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+  * [vim-bufferline](https://github.com/bling/vim-bufferline)
+  * [vim-devicons](https://github.com/ryanoasis/vim-devicons)
+  * [nerdtree](https://github.com/scrooloose/nerdtree)
+  * [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
+  * [nerdtree-syntax-highlight](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)
   * [palenight](https://github.com/drewtempelmeyer/palenight.vim)
 
 ### Tools
