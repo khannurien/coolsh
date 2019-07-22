@@ -63,6 +63,9 @@ RUN git config --global core.pager "diff-so-fancy | less --tabs=2 -RFX"
 RUN mkdir -p ~/.vim/plugged && \
     vim +PlugInstall +qall > /dev/null
 
+# update tldr cache
+RUN tldr --update
+
 # clean up git files
 RUN find . \( -name ".git" -o -name ".gitignore" -o -name ".gitmodules" -o -name ".gitattributes" \) -exec rm -rf -- {} +
 
