@@ -2,7 +2,7 @@
 🐚 A Docker container for shell power users
 
 ## Requirements
-You will need Docker and [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts).
+You will need Docker and [Fura Code Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode) from [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts).
 
 ## Included
 
@@ -46,13 +46,15 @@ You will need Docker and [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts).
 git clone https://github.com/khannurien/coolsh
 cd coolsh
 docker build -t coolsh .
-docker run -it --hostname coucou coolsh:latest
+docker run -it --hostname coucou -p 1337:7681 coolsh:latest
 ```
+
+Your terminal will be available in a browser at `http://localhost:1337`.
 
 You can also mount a directory from your host OS in order to work on it from the container:
 
 ```
-docker run -it --hostname coucou -v /path/to/directory:/mnt coolsh:latest
+docker run -it --hostname coucou -p 1337:7681 -v /path/to/directory:/mnt coolsh:latest
 ```
 
 The directory will then be available at `/mnt` in the container.

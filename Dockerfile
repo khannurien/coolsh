@@ -19,8 +19,10 @@ ADD https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/
 ADD https://raw.githubusercontent.com/denilsonsa/prettyping/master/prettyping /usr/bin/
 # tldr
 ADD https://raw.githubusercontent.com/raylee/tldr/master/tldr /usr/bin/
+# ttyd
+ADD https://github.com/tsl0922/ttyd/releases/download/1.5.2/ttyd_linux.x86_64 /usr/bin/ttyd
 # permissions
-RUN chmod 755 /usr/bin/diff-so-fancy /usr/bin/prettyping /usr/bin/tldr
+RUN chmod 755 /usr/bin/diff-so-fancy /usr/bin/prettyping /usr/bin/tldr /usr/bin/ttyd
 
 # bat, fd, lsd, ripgrep
 WORKDIR /tmp
@@ -35,9 +37,13 @@ RUN curl -L -O https://github.com/sharkdp/bat/releases/download/v0.11.0/bat_0.11
 RUN rm -rf *
 
 # correctly display powerline fonts
-RUN locale-gen C.UTF-8 && update-locale LANG=C.UTF-8
-ENV LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
-ENV TERM=xterm-256color
+RUN locale-gen C.UTF-8 && \
+    update-locale LANG=C.UTF-8
+
+ENV LANG=C.UTF-8 \
+    LANGUAGE=C.UTF-8 \
+    LC_ALL=C.UTF-8 \
+    TERM=xterm-256color
 
 RUN ln -f /usr/bin/zsh /bin/sh && \
     groupadd -r -g 1337 leet && \
@@ -66,7 +72,12 @@ RUN mkdir -p ~/.vim/plugged && \
 # update tldr cache
 RUN tldr --update
 
-# clean up git files
+# clean up git files
 RUN find . \( -name ".git" -o -name ".gitignore" -o -name ".gitmodules" -o -name ".gitattributes" \) -exec rm -rf -- {} +
 
-CMD ["/usr/bin/zsh"]
+CMD ["/usr/bin/ttyd", \
+    "--uid", "1337", \
+    "--gid", "1337", \
+    "-t", "fontFamily=FuraCode Nerd Font Mono", \
+    "-t", "theme={'background': '#292d3e', 'foreground': '#bfc7d5'}", \
+    "/usr/bin/zsh"]
