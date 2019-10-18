@@ -4,6 +4,10 @@
 ## Requirements
 You will need Docker and [Fura Code Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode) from [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts).
 
+## TODO
+
+  * [navi](https://github.com/denisidoro/navi)
+
 ## Included
 
 ### Shell

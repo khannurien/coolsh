@@ -30,7 +30,10 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " tree config
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | silent! NERDTree | endif
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" linting
+Plug 'dense-analysis/ale'
 
 " Initialize plugin system
 call plug#end()
@@ -40,7 +43,7 @@ filetype plugin indent on
 syntax on
 
 " show existing tab with 4 spaces width
-set noexpandtab
+set expandtab
 set copyindent
 set preserveindent
 set softtabstop=0
@@ -57,11 +60,9 @@ set incsearch       " Incremental search
 set autowrite       " Automatically save before commands like :next and :make
 set hidden          " Hide buffers when they are abandoned
 
-" remove non-breaking spaces from specific filetypes
-augroup RemoveSpaces
-    autocmd!
-    autocmd BufWritePre *.{ml,mli,l,c} silent! :%s/\%u00A0/ /g
-augroup end
+" show these bad boys
+set list
+set listchars=tab:»-,extends:›,precedes:‹,nbsp:·,trail:·
 
 " use palenight colorscheme
 set background=dark
