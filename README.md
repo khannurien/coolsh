@@ -7,6 +7,7 @@ You will need Docker and [Fura Code Mono](https://github.com/ryanoasis/nerd-font
 ## TODO
 
   * [navi](https://github.com/denisidoro/navi)
+  * [z](https://github.com/rupa/z)
 
 ## Included
 
@@ -35,7 +36,8 @@ You will need Docker and [Fura Code Mono](https://github.com/ryanoasis/nerd-font
   * [bat](https://github.com/sharkdp/bat)
   * curl
   * [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
-  * [fd](https://github.com/sharkdp/fd/)
+  * [fd](https://github.com/sharkdp/fd)
+  * [fzf-zsh](https://github.com/wyntau/fzf-zsh)
   * git
   * [lsd](https://github.com/Peltoche/lsd)
   * [ncdu](https://dev.yorhel.nl/ncdu)
