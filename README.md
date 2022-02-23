@@ -2,7 +2,7 @@
 🐚 A Docker container for shell power users
 
 ## Requirements
-You will need Docker and [Fura Code Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode) from [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts).
+You will need Docker and [Fira Code Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode) from [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts).
 
 ## TODO
 
